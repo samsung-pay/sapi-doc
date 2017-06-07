@@ -1,0 +1,297 @@
+swagger: '2.0'
+info:
+  description: |
+    This doc defines __Membership Samsung REST API__. Further information can be found at [Samsung Pay, Inc](http://www.samsung.com/us/samsung-pay).
+
+    ---
+
+    # Open SDK
+
+    __S2P__ (Save to Samsung Pay) __SDK__ is encrouged to use to avoid any unnecessary errors. SDK is open-sourced and under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+  version: 1.0.0-SNAPSHOT
+  title: Membership Samsung REST API
+host: api.samsungpaydev.us
+basePath: "/sapi/loyalty/v1"
+schemes: [https]
+paths:
+  "/registrations":
+    post:
+      tags:
+      - Registrations
+      summary: Register a membership card to Samsung Pay
+      description: ''
+      operationId: registerCard
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        description: Encoded JWT ([JSON Web Token](https://jwt.io)) token that is signed (`RS256`) by merchant
+        required: true
+        type: string
+      - name: body
+        in: body
+        description: Loyalty object representing user's membership card information
+        required: true
+        schema:
+          "$ref": "#/definitions/Registration"
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            "$ref": "#/definitions/RegistrationResponse"
+        '400':
+          description: Bad Request
+          schema:
+            "$ref": "#/definitions/400"
+        '401':
+          description: Authentication Failed
+          schema:
+            "$ref": "#/definitions/401"
+        '500':
+          description: Internal Server Error
+          schema:
+            "$ref": "#/definitions/500"
+        '503':
+          description: Service Unavailable
+          schema:
+            "$ref": "#/definitions/503"
+
+      security:
+      - Authorization: []
+securityDefinitions:
+  Authorization:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: JWT xxxx.xxxxxx.xxxxx
+definitions:
+  Registration:
+    type: object
+    required:
+    - membershipId
+    - membershipIdType
+    - programName
+    properties:
+      membershipId:
+        type: string
+        description: The unique identifier of the membership.
+      membershipIdType:
+        type: string
+        description: A enum value that describes the membership id type, i.e., CARDNUM means the membership id is a card number; PHONE means the membership id is a phone number; EMAIL means the membership id is an email address.
+        enum: [CARDNUM,PHONE,EMAIL]
+      programName:
+        type: string
+        description: The card program name that is registered in SPAY server.
+      barcode:
+        type: object
+        properties:
+          symbology:
+            type: string
+            description: A enum value that describes the barcode symbology.
+            enum: [AZTEC,CODABAR,CODE_39,CODE_93,CODE_128,DATA_MATRIX,EAN_8,EAN_13,ITF,MAXICODE,PDF_417,QR_CODE,RSS_14,RSS_EXPANDED,UPC_A,UPC_E,UPC_EAN_EXTENSION]
+          data:
+            type: string
+            description: The barcode data representing the membership information.
+      tracks:
+        description: The real track data information as it is on the physical membership card.
+        type: object
+        properties:
+          track1:
+            type: string
+          track2:
+            type: string
+          track3:
+            type: string
+      cardStatus:
+        type: string
+        description: The current status of the membership.
+        enum: [ACTIVE, INACTIVE]
+      userMessages:
+        description: The messages sent from merchant to user.
+        type: array
+        items:
+          $ref: "#/definitions/UserMessage"
+      customClaims:
+        description: The customized information of merchant.
+        type: array
+        items:
+          $ref: "#/definitions/CustomClaim"
+      cardArt:
+        $ref: "#/definitions/CardArt"
+
+  UserMessage:
+    type: object
+    properties:
+      startAt:
+        type: string
+        description: The start time string applying [RFC 3339 Data and Time Format](https://www.ietf.org/rfc/rfc3339.txt)
+      endAt:
+        type: string
+        description: The end time string applying [RFC 3339 Data and Time Format](https://www.ietf.org/rfc/rfc3339.txt)
+      i18ns:
+        type: array
+        items:
+          properties:
+            language:
+              type: string
+              description: The ISO 639-1 language code of the user message content.
+            title:
+              type: string
+              description: The title of the user message.
+            body:
+              type: string
+              description: The body of the user message.
+
+
+  CustomClaim:
+    type: object
+    properties:
+      i18ns:
+        type: array
+        items:
+          properties:
+            language:
+              type: string
+              description: The ISO 639-1 language code of the custom claim.
+            label:
+              type: string
+              description: The label value of the custom claim.
+            content:
+              type: string
+              description: The content of the costom claim
+
+  CardArt:
+    type: object
+    properties:
+      i18ns:
+        type: array
+        items:
+          properties:
+            language:
+              type: string
+              description: The ISO 639-1 language code of the card art content.
+            artUrl:
+              type: string
+              description: The url of the card art to be displayed in SPAY app. The url is generated during card program registration process.
+
+  JWT:
+    type: object
+    required:
+    - Header
+    - Payload
+    - Signature
+    properties:
+      Header:
+        type: object
+        properties:
+          alg:
+            type: string
+          typ:
+            type: string
+          kid:
+            type: string
+            description: The keyID, an identifier of the public key, will be provided upon successful registration with Samsung Pay merchant service.
+      Payload:
+        type: object
+        properties:
+          req:
+            type: string
+            description: the hash of request, i.e.,
+                      base64(sha256(utf8(
+                                 HTTP-Verb + "\n" +
+                                 Content-Type + "\n" +
+                                 CanonicalizedResource + "\n" +
+                                 body
+                            )))
+              CanonicalizedResource = Path of the HTTP-Request-URI encluding query string
+            example:
+              POST\napplication/json\n/sapi/loyalty/v1/registrations\n{"membershipId":"09827360873365","membershipIdType":"CARDNUM","programName":"Plus program"}
+      Signature:
+        type: string
+        description: The verify signature of jwt (JSON Web Token) object. By using the private key (will be provided upon successful registration with Samsung Pay merchant service), the jwt object need to be signed (RS256) for verification.
+
+  RegistrationResponse:
+    type: object
+    properties:
+      registrationId:
+        type: string
+      welcomeUrl:
+        type: string
+  400:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The milliseconds form of response's timestamp.
+        example: 1496339561113
+      status:
+        type: integer
+        enum: [400]
+      error:
+        type: string
+        enum: [Bad Request]
+      message:
+        type: string
+        example: "Missing or blank field: membershipId"
+      path:
+        type: string
+        description: The path of the HTTP request.
+  401:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The milliseconds form of response's timestamp.
+        example: 1496339561113
+      status:
+        type: integer
+        enum: [401]
+      error:
+        type: string
+        enum: [Unauthorized]
+      message:
+        type: string
+        example: Key not found
+      path:
+        type: string
+        description: The path of the HTTP request.
+  503:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The milliseconds form of response's timestamp.
+        example: 1496339561113
+      status:
+        type: integer
+        example: 503
+      error:
+        type: string
+        example: Service Unavailable
+      message:
+        type: string
+      path:
+        type: string
+        description: The path of the HTTP request.
+  500:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The milliseconds form of response's timestamp.
+        example: 1496339561113
+      status:
+        type: integer
+        example: 500
+      error:
+        type: string
+        example: Internal Server Error
+      message:
+        type: string
+      path:
+        type: string
+        description: The path of the HTTP request.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-2">
+
+          {% include side_nav.html %}
+
+        </div>
+        <div class="column">
+
+          {{ content }}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
