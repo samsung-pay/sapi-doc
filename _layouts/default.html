@@ -1,14 +1,29 @@
+{% assign pUri = page.uri %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
 {% include head.html %}
 
-<body>
+<body class="layout-documentation page-elements" style="zoom: 1;">
 
   {% include header.html %}
 
   <section class="section">
     <div class="container">
+
+      {% if pUri == '/' %}
+
+      <div class="column">
+        <div class="content">
+
+          {{ content }}
+
+        </div>
+      </div>
+
+      {% else %}
+
       <div class="columns">
         <div class="column is-2">
 
@@ -16,11 +31,18 @@
 
         </div>
         <div class="column">
+          
+          <div class="content">
 
-          {{ content }}
+            {{ content }}
+
+          </div>
 
         </div>
       </div>
+
+      {% endif %}
+
     </div>
   </section>
 

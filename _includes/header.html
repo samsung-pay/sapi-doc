@@ -1,4 +1,4 @@
-<section class="hero is-primary">
+<section class="hero is-primary is-medium">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-vcentered">
@@ -14,18 +14,19 @@
     </div>
   </div>
 
-  <!-- <div class="hero-foot">
+  <div class="hero-foot">
     <div class="container">
       <nav class="tabs is-boxed">
         <ul>
-          <li class="is-active">
-            <a href="#">Overview</a>
+          <li {% if pUri == '/' %}class="is-active"{% endif %} >
+            <a href="{{ "/" | relative_url }}">Overview</a>
           </li>
-          <li>
-            <a href="#">Tab1</a>
+          <li {% unless pUri == '/' %}class="is-active"{% endunless %} >
+            <a href="{{ "/merchantservice/registration" | relative_url }}">Docs</a>
           </li>
         </ul>
-      </nav></div>
-    </div> -->
+      </nav>
+    </div>
+  </div>
 
 </section>
