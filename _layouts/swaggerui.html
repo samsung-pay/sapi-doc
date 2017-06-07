@@ -25,7 +25,7 @@ layout: default
 window.onload = function() {
   // Build a system
   const ui = SwaggerUIBundle({
-    spec: {{ site.data[page.spec] | jsonify }},
+    spec: {{ site.data.api[page.spec] | jsonify }},
     dom_id: '#swagger_s2p',
     presets: [
       SwaggerUIBundle.presets.apis,
