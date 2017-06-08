@@ -123,7 +123,6 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '1.0.16'
             .setRequest(request)
             .sign(privateKey);
 
-
     // Sign with private key PEM file
     S2PRequest s2PRequestSignWithPEM = S2PRequest.newBuilder()
             .setKeyID(keyID)
