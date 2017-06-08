@@ -13,7 +13,7 @@ S2P SDK will grant Samsung Pay registered merchants capabilities of easily integ
 ## Installation
 
 #### Gradle
-```groovy
+```gradle
 compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '1.0.16'
 ```
 
@@ -31,6 +31,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '1.0.16'
   >  **Note:** please consider the unit test within repository as a general guideline about How to Use S2P SDK. In the test, most use cases have been demonstrated.
 
 1. Construct the Registration object
+
     ```java
     // Barcode
     Barcode barcode = Barcode.newBuilder()
