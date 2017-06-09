@@ -4,4 +4,4 @@ title: Memebership Concepts
 uri: membership/concepts
 ---
 
-### To be implemented
+> To be impelmented
