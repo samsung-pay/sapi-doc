@@ -14,7 +14,7 @@ S2P SDK will grant Samsung Pay registered merchants capabilities of easily integ
 
 #### Gradle
 ```gradle
-compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '1.0.16'
+compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 ```
 
 #### Maven
@@ -22,7 +22,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '1.0.16'
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
     <artifactId>s2p-reg</artifactId>
-    <version>1.0.16</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
