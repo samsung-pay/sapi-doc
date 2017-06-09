@@ -2,13 +2,6 @@ swagger: '2.0'
 info:
   description: |
     This doc defines __Membership Samsung REST API__. Further information can be found at [Samsung Pay, Inc](http://www.samsung.com/us/samsung-pay).
-
-    ---
-
-    # Open SDK
-
-    __S2P__ (Save to Samsung Pay) __SDK__ is encrouged to use to avoid any unnecessary errors. SDK is open-sourced and under [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
   version: 1.0.0
   title: Membership Samsung REST API
 host: api.samsungpaydev.us
