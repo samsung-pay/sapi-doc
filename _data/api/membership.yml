@@ -1,7 +1,12 @@
 swagger: '2.0'
 info:
   description: |
+    ```
+    [ Base path: /sapi/loyalty/v1 ]
+    ```
+
     This doc defines __Membership Samsung REST API__. Further information can be found at [Samsung Pay, Inc](http://www.samsung.com/us/samsung-pay).
+
   version: 1.0.0
   title: Membership Samsung REST API
 host: api.samsungpaydev.us
