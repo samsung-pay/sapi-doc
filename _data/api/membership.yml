@@ -69,11 +69,11 @@ securityDefinitions:
 definitions:
   Registration:
     type: object
-    required:
-    - membershipId
-    - membershipIdType
-    - programName
+    required: [cardId, membershipId, membershipIdType, programName]
     properties:
+      cardId:
+        type: string
+        description: The unique ideifier of the membership card. (in case of that merchant did not implement cardId, then use membershipId instead)
       membershipId:
         type: string
         description: The unique identifier of the membership.
@@ -178,10 +178,7 @@ definitions:
 
   JWT:
     type: object
-    required:
-    - Header
-    - Payload
-    - Signature
+    required: [Header, Payload, Signature]
     properties:
       Header:
         type: object
