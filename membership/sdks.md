@@ -97,6 +97,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
             .build();
 
     Registration.newBuilder()
+            .setCardId("3213211q2w3e")
             .setMembershipId("1q2w3e")
             .setMembershipIDType(MembershipIDType.CARDNUM)
             .setProgramName("Holly membership program name")
