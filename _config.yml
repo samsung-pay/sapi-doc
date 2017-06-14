@@ -32,6 +32,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
 
 github_username: samsung-pay
 twitter_username: SamsungPay
