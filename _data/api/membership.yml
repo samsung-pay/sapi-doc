@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  description: |
+  description: >
     ```
     [ Base path: /sapi/loyalty/v1 ]
     ```
@@ -17,8 +17,8 @@ paths:
     post:
       tags:
       - Registrations
-      summary: Register a membership card to Samsung Pay
-      description: ''
+      description: >
+        Register a membership card to Samsung Pay
       operationId: registerCard
       consumes:
       - application/json
