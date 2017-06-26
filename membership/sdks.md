@@ -15,15 +15,17 @@ uri: membership/sdks
 
 S2P SDK will grant Samsung Pay registered merchants capabilities of easily integrating `Save to Samsung Pay` button on membership websites. With integrated `Save to Samsung Pay` button, end users can simply add membership cards from merchant's websites to `Samsung Pay`.
 
-## Installation
+<br>
+#### Installation
 ---
 
-###### Gradle
+##### Gradle
 ```gradle
 compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 ```
 
-###### Maven
+<br>
+##### Maven
 ```xml
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
@@ -32,7 +34,8 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 </dependency>
 ```
 
-## Usages and tests
+<br>
+#### Usages and tests
 ---
 
   >  **Note:** please consider the unit test within repository as a general guideline about How to Use S2P SDK. In the test, most use cases have been demonstrated.

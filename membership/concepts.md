@@ -10,7 +10,7 @@ The following diagram depicts the partner registration for web-desktop and mobil
 
 ![Save to Samsung Pay API workflows]({{ "/assets/images/s2p_api_workflows.png" | relative_url }})
 
-
+<br>
 #### Web API Registration Process
 ---
 1. A partner registers with Samsung Pay. See https://samsung-pay.github.io/sapi-doc/membership/sdks for more information.
@@ -27,6 +27,7 @@ The following diagram depicts the partner registration for web-desktop and mobil
 
 5. Samsung Pay loads the merchant offer into the customer’s Samsung Pay mobile wallet.
 
+<br>
 #### Mobile App Registration Process
 ---
 1. A partner registers with Samsung Pay. See https://samsung-pay.github.io/sapi-doc/membership/sdks for more information.
