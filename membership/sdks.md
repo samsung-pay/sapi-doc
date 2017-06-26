@@ -4,7 +4,7 @@ title: Membership SDKs
 uri: membership/sdks
 ---
 
-# Samsung Pay S2P Java SDK
+## Samsung Pay S2P Java SDK
 ---
 
 > **WARNING:** this SDK is currently under active development and NOT officially released yet. For release plan please check [Samsung Pay](http://www.samsung.com/us/samsung-pay/) for further information.
