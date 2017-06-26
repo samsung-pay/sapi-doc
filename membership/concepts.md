@@ -13,7 +13,7 @@ The following diagram depicts the partner registration for web-desktop and mobil
 <br>
 #### Web API Registration Process
 ---
-1. A partner registers with Samsung Pay. See https://samsung-pay.github.io/sapi-doc/membership/sdks for more information.
+1. A partner registers with Samsung Pay. See [Membership API SDKs][Membership API SDKs page] for more information.
 
 2. The partner renders the Save to Pay button on a merchant web page by adding the following HTML:
     ```html
@@ -30,7 +30,7 @@ The following diagram depicts the partner registration for web-desktop and mobil
 <br>
 #### Mobile App Registration Process
 ---
-1. A partner registers with Samsung Pay. See https://samsung-pay.github.io/sapi-doc/membership/sdks for more information.
+1. A partner registers with Samsung Pay. See [Membership API SDKs][Membership API SDKs page] for more information.
 
 2. The partner sends the signed registration object using the registration API to retrieve the Samsung Pay app. See [Membership API][Membership API page] for more information.
 
@@ -52,3 +52,4 @@ The following diagram depicts the partner registration for web-desktop and mobil
 
 
 [Membership API page]: https://samsung-pay.github.io/sapi-doc/membership/api
+[Membership API SDKs page]: https://samsung-pay.github.io/sapi-doc/membership/sdks
