@@ -6,8 +6,12 @@ uri: membership/sdks
 
 ## Samsung Pay S2P Java SDK
 ---
-
-> **WARNING:** this SDK is currently under active development and NOT officially released yet. For release plan please check [Samsung Pay](http://www.samsung.com/us/samsung-pay/) for further information.
+<div class="notification is-warning">
+  <span class="icon">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+  </span>
+  <strong>WARNING:</strong> The SDK is currently under active development and NOT officially released yet.
+</div>
 
 S2P SDK will grant Samsung Pay registered merchants capabilities of easily integrating `Save to Samsung Pay` button on membership websites. With integrated `Save to Samsung Pay` button, end users can simply add membership cards from merchant's websites to `Samsung Pay`.
 

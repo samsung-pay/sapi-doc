@@ -2,6 +2,10 @@ section.hero div.hero-head header.nav div.nav-right.nav-menu span.nav-item a.but
   background-color: transparent;
 }
 
+table.components_desc thead th.components_name {
+  width: 250px;
+}
+
 /**
 * Syntax highlighting styles
 */

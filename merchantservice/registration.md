@@ -13,7 +13,7 @@ The Samsung Pay Merchant service helps merchants manage membership programs insi
   <span class="icon">
     <i class="fa fa-info-circle" aria-hidden="true"></i>
   </span>
-  The Self-Service portal is currently under development.
+  <strong>WARNING:</strong> The Self-Service portal may not be available at this time.
 </div>
 
 <ol>
