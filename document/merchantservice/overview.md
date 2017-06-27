@@ -18,12 +18,12 @@ uri: document/merchantservice/overview
 
 The following diagram depicts the interaction of components in a partner and Samsung Pay integration:
 
-![Save to Samsung Pay components]({{ "/assets/images/components.png" | relative_url }})
+![Save to Samsung Pay components]({{ "/assets/images/components.jpg" | relative_url }})
 
 
 #### Component Descriptions
 ---
-<table class="table is-bordered components_desc">
+<table class="table is-bordered is-striped is-narrow components_desc">
   <thead>
     <tr>
       <th class="components_name">Component</th>
@@ -32,21 +32,10 @@ The following diagram depicts the interaction of components in a partner and Sam
   </thead>
   <tbody>
     <tr>
-      <td>Partner Server</td>
+      <td>Admin Services</td>
       <td>
-        The partner server for client facing apps. Samsung Pay pulls membership details from the merchant server and lets partners to push updated membership information to its customers.
-      </td>
-    </tr>
-    <tr>
-      <td>Partner App</td>
-      <td>
-        The partner application integrated with Samsung Pay.
-      </td>
-    </tr>
-    <tr>
-      <td>Partner Website</td>
-      <td>
-        The partner website that includes the <strong>Save to Samsung Pay</strong> button.
+        The non-public portal used by Samsung personnel for serving off-line partner requests.
+        </br>Contact your Samsung Relationship Manager for assistance.
       </td>
     </tr>
     <tr>
@@ -56,9 +45,21 @@ The following diagram depicts the interaction of components in a partner and Sam
       </td>
     </tr>
     <tr>
-      <td>Self-Service Portal</td>
+      <td>Partner App</td>
       <td>
-        A web service that enables a partner to register with Samsung Pay and perform select registration management tasks.
+        The partner application integrated with Samsung Pay.
+      </td>
+    </tr>
+    <tr>
+      <td>Partner Server</td>
+      <td>
+        The partner server for client facing apps. Samsung Pay pulls membership details from the merchant server and lets partners to push updated membership information to its customers.
+      </td>
+    </tr>
+    <tr>
+      <td>Partner Website</td>
+      <td>
+        The partner website that includes the <strong>Save to Samsung Pay</strong> button.
       </td>
     </tr>
     <tr>
@@ -74,9 +75,15 @@ The following diagram depicts the interaction of components in a partner and Sam
       </td>
     </tr>
     <tr>
-      <td>Admin Services</td>
+      <td>Samsung Relationship Manager</td>
       <td>
-        The non-public portal used by Samsung personnel for serving off-line partner requests.
+        A Samsung Pay representative that assists a partner with all Samsung Pay management tasks.
+      </td>
+    </tr>
+    <tr>
+      <td>Self-Service Portal</td>
+      <td>
+        A web service that enables a partner to register with Samsung Pay and perform select registration management tasks.
       </td>
     </tr>
   </tbody>

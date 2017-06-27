@@ -4,7 +4,7 @@ title: Terms
 uri: support/terms
 ---
 
-## Terms
+## Save to Samsung Pay API Terms of Service
 ---
 
 > To be impelmented
