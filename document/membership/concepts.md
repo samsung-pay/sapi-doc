@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Memebership Concepts
-uri: membership/concepts
+uri: document/membership/concepts
 ---
 
 ## Save to Pay API Flows

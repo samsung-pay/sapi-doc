@@ -43,10 +43,16 @@
       <nav class="tabs is-boxed">
         <ul>
           <li {% if pUri == '/' %}class="is-active"{% endif %} >
-            <a href="{{ "/" | relative_url }}">Overview</a>
+            <a href="{{ "/" | relative_url }}">OVERVIEW</a>
           </li>
-          <li {% unless pUri == '/' %}class="is-active"{% endunless %} >
-            <a href="{{ "/merchantservice/registration" | relative_url }}">Documentation</a>
+          <li {% if pUri contains 'document/merchantservice/' %}class="is-active"{% endif %} >
+            <a href="{{ "/document/merchantservice/overview" | relative_url }}">DOCUMENTATION</a>
+          </li>
+          <li {% if pUri contains 'reference/' %}class="is-active"{% endif %} >
+            <a href="{{ "/reference/uxguidelines" | relative_url }}">REFERENCE</a>
+          </li>
+          <li {% if pUri contains 'support/' %}class="is-active"{% endif %} >
+            <a href="{{ "/support/terms" | relative_url }}">SUPPORT</a>
           </li>
         </ul>
       </nav>

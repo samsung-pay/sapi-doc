@@ -12,7 +12,8 @@
   <section class="section">
     <div class="container">
 
-      {% if pUri == '/' %}
+      {% case pUri %}
+      {% when '/' %}
 
       <div class="column">
         <div class="content">
@@ -24,24 +25,31 @@
 
       {% else %}
 
-      <div class="columns">
-        <div class="column is-2">
+        <div class="columns">
+          <div class="column is-2">
 
-          {% include side_nav.html %}
+          {% if pUri contains 'document/' %}
+            {% include document/side_nav.html %}
 
-        </div>
-        <div class="column">
+          {% elsif pUri contains 'reference/'  %}
+            {% include reference/side_nav.html %}
 
-          <div class="content">
+          {% elsif pUri contains 'support/'  %}
+            {% include support/side_nav.html %}
 
-            {{ content }}
+          {% endif %}
 
           </div>
+          <div class="column">
+            <div class="content">
 
+              {{ content }}
+
+            </div>
+          </div>
         </div>
-      </div>
 
-      {% endif %}
+      {% endcase %}
 
     </div>
   </section>

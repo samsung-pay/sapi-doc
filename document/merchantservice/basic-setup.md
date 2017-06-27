@@ -1,20 +1,13 @@
 ---
 layout: default
-title: Registration
-uri: merchantservice/registration
+title: Basic Setup
+uri: document/merchantservice/basic-setup
 ---
 
-## Registration
+## Basic setup
 ---
 
 The Samsung Pay Merchant service helps merchants manage membership programs inside the Samsung Pay. To start, register the merchant with Merchant service.
-
-<div class="notification is-warning">
-  <span class="icon">
-    <i class="fa fa-info-circle" aria-hidden="true"></i>
-  </span>
-  <strong>WARNING:</strong> The Self-Service portal may not be available at this time.
-</div>
 
 <ol>
   <li>
