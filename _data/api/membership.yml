@@ -73,7 +73,7 @@ definitions:
     properties:
       cardId:
         type: string
-        description: The unique ideifier of the membership card. (in case of that merchant did not implement cardId, then use membershipId instead)
+        description: The unique identifier of the membership card. (If the merchant did not implement cardId, then use membershipId.)
       membershipId:
         type: string
         description: The unique identifier of the membership.
@@ -207,7 +207,7 @@ definitions:
               POST\napplication/json\n/sapi/loyalty/v1/registrations\n{"membershipId":"09827360873365","membershipIdType":"CARDNUM","programName":"Plus program"}
       Signature:
         type: string
-        description: The verify signature of jwt (JSON Web Token) object. By using the private key (will be provided upon successful registration with Samsung Pay merchant service), the jwt object need to be signed (RS256) for verification.
+        description: The verification signature of a JWT (JSON Web Token) object. By using the private key (provided after successful signed up with the Samsung Pay merchant service), the JWT object must be signed (RS256 algorithm) for verification.
 
   RegistrationResponse:
     type: object
@@ -221,7 +221,7 @@ definitions:
     properties:
       timestamp:
         type: integer
-        description: The milliseconds form of response's timestamp.
+        description: The response timestamp in milliseconds.
         example: 1496339561113
       status:
         type: integer
@@ -240,7 +240,7 @@ definitions:
     properties:
       timestamp:
         type: integer
-        description: The milliseconds form of response's timestamp.
+        description: The response timestamp in milliseconds.
         example: 1496339561113
       status:
         type: integer
@@ -259,7 +259,7 @@ definitions:
     properties:
       timestamp:
         type: integer
-        description: The milliseconds form of response's timestamp.
+        description: The response timestamp in milliseconds.
         example: 1496339561113
       status:
         type: integer
@@ -277,7 +277,7 @@ definitions:
     properties:
       timestamp:
         type: integer
-        description: The milliseconds form of response's timestamp.
+        description: The response timestamp in milliseconds.
         example: 1496339561113
       status:
         type: integer
