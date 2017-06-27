@@ -207,7 +207,7 @@ definitions:
               POST\napplication/json\n/sapi/loyalty/v1/registrations\n{"membershipId":"09827360873365","membershipIdType":"CARDNUM","programName":"Plus program"}
       Signature:
         type: string
-        description: The verification signature of a JWT (JSON Web Token) object. By using the private key (provided after successful signed up with the Samsung Pay merchant service), the JWT object must be signed (RS256 algorithm) for verification.
+        description: The verification signature of a JWT (JSON Web Token) object. By using the private key (provided after successful sign up with the Samsung Pay merchant service), the JWT object must be signed (RS256 algorithm) for verification.
 
   RegistrationResponse:
     type: object
