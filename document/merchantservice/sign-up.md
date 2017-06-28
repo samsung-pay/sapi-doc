@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Basic Setup
+title: Sign up
 uri: document/merchantservice/sign-up
 ---
 
-## Basic setup
+## Sign up
 ---
 
 Contact a Samsung Pay Relationship Manager for assistance. The Self-Service Portal will be available at a future date.
