@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Overview
-uri: document/merchantservice/overview
+uri: documentation/merchantservice/overview
 ---
 
 ## Integration Process Overview

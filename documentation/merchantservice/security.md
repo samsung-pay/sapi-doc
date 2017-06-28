@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Security
-uri: document/merchantservice/security
+uri: documentation/merchantservice/security
 ---
 
 ## Security

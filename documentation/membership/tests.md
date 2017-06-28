@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Membership Tests
-uri: document/membership/tests
+uri: documentation/membership/tests
 ---
 
 ## Tests

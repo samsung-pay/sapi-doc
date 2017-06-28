@@ -1,0 +1,33 @@
+<aside class="menu">
+  <p class="menu-label">
+    Merchant Service
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{{ "/documentation/merchantservice/overview" | relative_url }}" {% if pUri == 'documentation/merchantservice/overview' %}class="is-active"{% endif %} >Overview</a>
+    </li>
+    <li>
+      <a href="{{ "/documentation/merchantservice/security" | relative_url }}" {% if pUri == 'documentation/merchantservice/security' %}class="is-active"{% endif %} >Security</a>
+    </li>
+    <li>
+      <a href="{{ "/documentation/merchantservice/sign-up" | relative_url }}" {% if pUri == 'documentation/merchantservice/sign-up' %}class="is-active"{% endif %} >Sign up</a>
+    </li>
+  </ul>
+  <p class="menu-label">
+    Membership
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{{ "/documentation/membership/concepts" | relative_url }}" {% if pUri == 'documentation/membership/concepts' %}class="is-active"{% endif %} >Concepts</a>
+    </li>
+    <li>
+      <a href="{{ "/documentation/membership/api" | relative_url }}" {% if pUri == 'documentation/membership/api' %}class="is-active"{% endif %} >REST APIs</a>
+    </li>
+    <li>
+      <a href="{{ "/documentation/membership/sdks" | relative_url }}" {% if pUri == 'documentation/membership/sdks' %}class="is-active"{% endif %} >SDKs</a>
+    </li>
+    <li>
+      <a href="{{ "/documentation/membership/tests" | relative_url }}" {% if pUri == 'documentation/membership/tests' %}class="is-active"{% endif %} >Tests</a>
+    </li>
+  </ul>
+</aside>

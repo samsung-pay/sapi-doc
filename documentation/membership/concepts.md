@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Memebership Concepts
-uri: document/membership/concepts
+uri: documentation/membership/concepts
 ---
 
 ## Save to Samsung Pay API Flows
@@ -45,5 +45,5 @@ Samsung Pay provides an SDK that enables Samsung Pay partners to easily integrat
 4. A customer who views the page taps the button.
 5. Samsung Pay loads the offer into the customer’s Samsung Pay mobile wallet.
 
-[Membership API page]: https://samsung-pay.github.io/sapi-doc/membership/api
-[Membership API SDKs page]: https://samsung-pay.github.io/sapi-doc/membership/sdks
+[Membership API page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/api
+[Membership API SDKs page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/sdks

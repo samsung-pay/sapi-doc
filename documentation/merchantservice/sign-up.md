@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sign up
-uri: document/merchantservice/sign-up
+uri: documentation/merchantservice/sign-up
 ---
 
 ## Sign up

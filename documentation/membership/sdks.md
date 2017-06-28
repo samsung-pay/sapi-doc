@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Membership SDKs
-uri: document/membership/sdks
+uri: documentation/membership/sdks
 ---
 
 ## Samsung Pay S2P Java SDK
