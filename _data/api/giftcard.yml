@@ -1,0 +1,200 @@
+swagger: '2.0'
+info:
+  description: >
+    ```
+    [ Base path: /sapi/giftcard/v1 ]
+    ```
+
+    This doc defines __Gift Card Samsung REST API__. Further information can be found at [Samsung Pay, Inc](http://www.samsung.com/us/samsung-pay).
+
+  version: 1.0.0
+  title: Gift Card Samsung REST API
+host: api.samsungpaydev.us
+basePath: "/sapi/giftcard/v1"
+schemes: [https]
+paths:
+  "/registrations":
+    post:
+      tags:
+      - Registrations
+      description: >
+        Register a gift card to Samsung Pay
+      operationId: registerCard
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - name: Authorization
+        in: header
+        description: Encoded JWT ([JSON Web Token](https://jwt.io)) token that is signed (`RS256`) by merchant
+        required: true
+        type: string
+      - name: body
+        in: body
+        description: Gift card object representing user's gift card information
+        required: true
+        schema:
+          "$ref": "#/definitions/Registration"
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            "$ref": "#/definitions/RegistrationResponse"
+        '400':
+          description: Bad Request
+          schema:
+            "$ref": "#/definitions/400"
+        '401':
+          description: Authentication Failed
+          schema:
+            "$ref": "#/definitions/401"
+        '500':
+          description: Internal Server Error
+          schema:
+            "$ref": "#/definitions/500"
+        '503':
+          description: Service Unavailable
+          schema:
+            "$ref": "#/definitions/503"
+
+      security:
+      - Authorization: []
+securityDefinitions:
+  Authorization:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: JWT xxxx.xxxxxx.xxxxx
+definitions:
+  Registration:
+    type: object
+    required: [cardId, cardNum, productId, pin]
+    properties:
+      cardId:
+        type: string
+        description: The unique identifier of the gift card. (If the merchant did not implement cardId, then use card number.)
+      cardNum:
+        type: string
+        description: The gift card number.
+      productId:
+        type: string
+        description: The product id of gift card. This is an identifier of product that the gift card belongs to.
+      pin:
+        type: string
+        description: The gift card pin.
+
+  JWT:
+    type: object
+    required: [Header, Payload, Signature]
+    properties:
+      Header:
+        type: object
+        properties:
+          alg:
+            type: string
+          typ:
+            type: string
+          kid:
+            type: string
+            description: The keyID, an identifier of the public key, will be provided upon successful registration with Samsung Pay merchant service.
+      Payload:
+        type: object
+        properties:
+          req:
+            type: string
+            description: the hash of request, i.e.,
+                      base64(sha256(utf8(
+                                 HTTP-Verb + "\n" +
+                                 Content-Type + "\n" +
+                                 CanonicalizedResource + "\n" +
+                                 body
+                            )))
+              CanonicalizedResource = Path of the HTTP-Request-URI encluding query string
+            example:
+              POST\napplication/json\n/sapi/giftcard/v1/registrations\n{"giftcardId":"09827360873365","gitcardNum":"09827360873365","productId":"p010101","pin":"1002233"}
+      Signature:
+        type: string
+        description: The verification signature of a JWT (JSON Web Token) object. By using the private key (provided after successful sign up with the Samsung Pay merchant service), the JWT object must be signed (RS256 algorithm) for verification.
+
+  RegistrationResponse:
+    type: object
+    properties:
+      registrationId:
+        type: string
+      welcomeUrl:
+        type: string
+  400:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The response timestamp in milliseconds.
+        example: 1496339561113
+      status:
+        type: integer
+        enum: [400]
+      error:
+        type: string
+        enum: [Bad Request]
+      message:
+        type: string
+        example: "Missing or blank field: gift card id"
+      path:
+        type: string
+        description: The path of the HTTP request.
+  401:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The response timestamp in milliseconds.
+        example: 1496339561113
+      status:
+        type: integer
+        enum: [401]
+      error:
+        type: string
+        enum: [Unauthorized]
+      message:
+        type: string
+        example: Key not found
+      path:
+        type: string
+        description: The path of the HTTP request.
+  503:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The response timestamp in milliseconds.
+        example: 1496339561113
+      status:
+        type: integer
+        example: 503
+      error:
+        type: string
+        example: Service Unavailable
+      message:
+        type: string
+      path:
+        type: string
+        description: The path of the HTTP request.
+  500:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        description: The response timestamp in milliseconds.
+        example: 1496339561113
+      status:
+        type: integer
+        example: 500
+      error:
+        type: string
+        example: Internal Server Error
+      message:
+        type: string
+      path:
+        type: string
+        description: The path of the HTTP request.
