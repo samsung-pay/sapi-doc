@@ -18,7 +18,7 @@ uri: documentation/merchantservice/overview
 
 The following diagram depicts the interaction of components in a partner and Samsung Pay integration:
 
-![Save to Samsung Pay components]({{ "/assets/images/components.jpg" | relative_url }})
+![Save to Samsung Pay components]({{ "/assets/images/merchant_service/components.png" | relative_url }})
 
 
 #### Component Descriptions
@@ -35,7 +35,7 @@ The following diagram depicts the interaction of components in a partner and Sam
       <td>Admin Services</td>
       <td>
         The non-public portal used by Samsung personnel for serving off-line partner requests.
-        </br>Contact your Samsung Relationship Manager for assistance.
+        <br><br>Contact your Samsung Relationship Manager for assistance.
       </td>
     </tr>
     <tr>

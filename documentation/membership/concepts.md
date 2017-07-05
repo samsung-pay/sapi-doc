@@ -4,11 +4,11 @@ title: Memebership Concepts
 uri: documentation/membership/concepts
 ---
 
-## Save to Samsung Pay API Flows
+## Partner Membership Card Registration API Flows
 ---
-The following diagram depicts the partner registration for web-desktop and mobile scenarios.
+The following diagram depicts the partner membership card registration process for web-desktop and mobile registration scenarios.
 
-![Save to Samsung Pay API workflows]({{ "/assets/images/s2p_api_workflows.png" | relative_url }})
+![Save to Samsung Pay  API workflows]({{ "/assets/images/membership/api_workflows.png" | relative_url }})
 
 <br>
 #### Membership Card Registration Process
@@ -47,3 +47,10 @@ Samsung Pay provides an SDK that enables Samsung Pay partners to easily integrat
 
 [Membership API page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/api
 [Membership API SDKs page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/sdks
+
+<br>
+#### Loyalty Card Program
+---
+A loyalty card program is an incentive plan for your customers. It allows you to offer them discounts, coupons, points, other rewards in exchange for purchasing your products with Samsung Pay. It also allows you to track customer activity and remind them to buy from your business when they are near one of your locations.
+
+The Registrations API allows your customers to add your loyalty program cards to their digital wallets. Once you have integrated the Save to Samsung Pay button into the web page where you want to engage customers, all they have to do is tap the button to load the card into their Samsung Pay wallet.
