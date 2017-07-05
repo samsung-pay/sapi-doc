@@ -107,8 +107,9 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
             .setUserMessages(Collections.singletonList(userMessage1))
             .build();
     ```
-
+<br>
 2. Construct the S2PRequest and sign
+<br>
     ```java
     // merchant's privateKey, keyId (will be provided upon successfull registration)
     RSAPrivateKey privateKey =
@@ -135,8 +136,9 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 
     String s2PReq = s2PRequest.encode();
     ```
-
+<br>
 3. Pass the s2PReq json object (generated in the previous step) via View-Model (depend on MVC framework) to the view template, in where the [S2P JavaScript SDK](https://github.com/initor/s2p) will be included as well
+<br>
     ```html
     <div id="S2P-root" s2p-req="{S2PReq}"></div>
     <script src="{public_files}/s2p.js"></script>
