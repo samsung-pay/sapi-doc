@@ -31,8 +31,6 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 #### Usage and tests
 ---
 
-  >  **Note:** please consider the unit test within repository as a general guideline about How to Use S2P SDK. In the test, most use cases have been demonstrated.
-
 1. Construct the Registration object
 
     ```java
