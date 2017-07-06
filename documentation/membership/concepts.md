@@ -6,12 +6,12 @@ uri: documentation/membership/concepts
 
 ## Membership Card Programs
 ---
-A membership or loyalty card program is an incentive plan for your customers. It allows you to offer them discounts, coupons, points, other rewards in exchange for purchasing your products. with Samsung Pay. It also allows you to track customer activity and remind them to buy from your business when they are near one of your locations.
+A membership or membership card program is an incentive plan for your customers. It allows you to offer them discounts, coupons, points, other rewards in exchange for purchasing your products. with Samsung Pay. It also allows you to track customer activity and remind them to buy from your business when they are near one of your locations.
 
 <br>
 #### Save to Samsung Pay API
 ---
-Also known as the Registration API, merchants and partners use it to enable Save to Samsung Pay functionality on their mobile apps and websites. Once enabled, Samsung Pay users are presented with a Save to Samsung Pay button when they visit those mobile app or website.  When they tap the button, the membership or loyalty program is saved to their Samsung Pay app after authentication.
+Also known as the Registration API, merchants and partners use it to enable Save to Samsung Pay functionality on their mobile apps and websites. Once enabled, Samsung Pay users are presented with a Save to Samsung Pay button when they visit those mobile app or website.  When they tap the button, the membership or membership program is saved to their Samsung Pay app after authentication.
 
 The following diagrams depict the API flows for desktop-web and mobile scenarios:
 
