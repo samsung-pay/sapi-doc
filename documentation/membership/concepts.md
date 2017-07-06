@@ -15,13 +15,23 @@ Also known as the Registration API, merchants and partners use it to enable Save
 
 The following diagrams depict the API flows for desktop-web and mobile scenarios:
 
-![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/desktop_api_flow_01.png" | relative_url }})
-![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/desktop_api_flow_02.png" | relative_url }})
+![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/api_flows/desktop_01.png" | relative_url }})
+![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/api_flows/desktop_02.png" | relative_url }})
+
+1. When user taps on **Save to Samsung Pay** button, the QR code is displayed on the screen.
+
+2. User launches Samsung pay app to scan the QR code.
+
+3. Card is saved into Samsung pay app after user confirmation within the app.
 
 ---
 
-![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/mobile_api_flow_01.png" | relative_url }})
-![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/mobile_api_flow_02.png" | relative_url }})
+![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/api_flows/mobile_01.png" | relative_url }})
+![Desktop Save to Samsung Pay API workflows]({{ "/assets/images/membership/api_flows/mobile_02.png" | relative_url }})
+
+1. When user taps on **Save to Samsung Pay** button, the Samsung Pay app is launched.
+
+2. Card is saved into Samsung pay app after user confirmation within the app.
 
 ---
 
