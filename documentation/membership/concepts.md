@@ -20,9 +20,9 @@ The following diagrams depict the API flows for desktop-web and mobile scenarios
 
 1. When user taps on **Save to Samsung Pay** button, the QR code is displayed on the screen.
 
-2. User launches Samsung pay app to scan the QR code.
+2. User launches Samsung Pay app to scan the QR code.
 
-3. Card is saved into Samsung pay app after user confirmation within the app.
+3. Card is saved into Samsung Pay app after user confirmation within the app.
 
 ---
 
@@ -31,7 +31,7 @@ The following diagrams depict the API flows for desktop-web and mobile scenarios
 
 1. When user taps on **Save to Samsung Pay** button, the Samsung Pay app is launched.
 
-2. Card is saved into Samsung pay app after user confirmation within the app.
+2. Card is saved into Samsung Pay app after user confirmation within the app.
 
 ---
 

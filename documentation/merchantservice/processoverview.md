@@ -11,11 +11,11 @@ The integration process includes the following steps:
 
   1. A partner contacts a Samsung Relationship Manager to get Samsung Pay API credentials for accessing the API.
 
-  2. The partner uses the technical information including the process details, API documentation, and UI guidelinesprovided by this web site to complete the integration with Samsung Pay wallet.
+  2. The partner uses the technical information including the process details, API documentation, and UI guidelines provided by this website to complete the integration with Samsung Pay wallet.
 
-  3. After completing the integrationregistration, the partner reviews the solutionintegration with the Samsung Relationship Manager to ensure UX and brand guidelines/allstandards have been met.
+  3. After completing the registration, the partner reviews the solution with the Samsung Relationship Manager to ensure UX and brand guidelines/allstandards have been met.
 
-  4. Finally, the merchant app/website The integrated solution is made public for users through distribution channels as applicable.
+  4. Finally, the merchant app/website is made public for users through distribution channels as applicable.
 
 
 The following diagram depicts the interaction of components in a partner and Samsung Pay integration:
@@ -51,14 +51,14 @@ The following diagram depicts the interaction of components in a partner and Sam
     <tr>
       <td>Partner Server</td>
       <td>
-        The back-end service for partner’s app or website, typically responsible for handling user authentication, business logic, and so on.
+        The back-end service for the partner’s app or website, typically responsible for handling user authentication, business logic, and so on.
       </td>
     </tr>
 
     <tr>
       <td>Partner</td>
       <td>
-        A person authorized to make changes or perform management tasks for the integrated partnerSave to Samsung solution.
+        A person authorized to make changes or perform management tasks for the integrated partner Save to Samsung solution.
       </td>
     </tr>
 
