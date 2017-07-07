@@ -69,20 +69,17 @@ securityDefinitions:
 definitions:
   Registration:
     type: object
-    required: [cardId, cardNum, productId, pin]
+    required: [cardId, productId, tncLink]
     properties:
       cardId:
         type: string
         description: The unique identifier of the gift card. (If the merchant did not implement cardId, then use card number.)
-      cardNum:
-        type: string
-        description: The gift card number.
       productId:
         type: string
         description: The product id of gift card. This is an identifier of product that the gift card belongs to.
-      pin:
+      tncLink:
         type: string
-        description: The gift card pin.
+        description: The link of product's terms and conditions page.
 
   JWT:
     type: object
