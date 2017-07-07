@@ -35,5 +35,56 @@ The following diagrams depict the API flows for desktop-web and mobile scenarios
 
 ---
 
+<br>
+#### Options for Email Distribution of the Save to Samsung Pay Button
+---
+There are two options available for a partner to enable the Save to Samsung Pay button in an email. Each option is described below.
+
+##### Embedding the URL Generated from the Samsung Pay Service
+1.  From a partner’s back-end server:
+    <dl>
+      <dt>a. Saves the card information to the Samsung Pay server using the Save to Pay API and retrieve the card URL from the Samsung Pay server.</dt>
+      <dt>b. Embeds the URL into the email along with the Save to Samsung Pay button.</dt>
+      <dt>c. Sends the email to the recipient (user).</dt>
+    </dl>
+
+2.  The user opens the email and clicks the link/button.
+
+3.  The user completes the process of saving the card to his/her account.
+
+##### Embedding the URL of the Partner System
+1.  From a partner’s back-end server:
+    <dl>
+      <dt>a. Generates partner’s own URL.</dt>
+      <dt>b. Embeds the URL into the email along with the Save to Samsung Pay button.</dt>
+      <dt>c. Sends the email to the recipient (user).</dt>
+    </dl>
+
+2.  The user opens the email and clicks the link/button that links to the partner’s back-end server. That triggers the saving of the card information to the Samsung Pay server using the Save to Pay API.
+
+3.  The user completes the process of saving the card to his/her account.
+
+
+<br>
+#### Email Flow User Experience
+---
+
+##### Email Desktop
+How a user adds a card from an email message from a partner/merchant from an email opened from the desktop:
+1.  User opens the email.
+
+2.  User scans the QR code with a cell phone camera.
+
+3.  The card is added to the user’s Samsung Pay account.
+
+##### Email Mobile
+How a user adds a card from an email message from a partner/merchant from an email opened from the mobile device:
+1.  User opens the email.
+
+2.  User taps the Save to Samsung Pay button.
+
+3.  The card is added to the user’s Samsung Pay account.
+
+
 [Membership API page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/api
 [Membership API SDKs page]: https://samsung-pay.github.io/sapi-doc/documentation/membership/sdks
