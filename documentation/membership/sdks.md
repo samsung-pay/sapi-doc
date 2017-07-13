@@ -14,7 +14,7 @@ S2P SDK will grant Samsung Pay registered merchants capabilities of easily integ
 
 ##### Gradle
 ```gradle
-compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
+compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
 ```
 
 <br>
@@ -22,7 +22,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 ```xml
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
-    <artifactId>s2p-reg</artifactId>
+    <artifactId>s2p-all-java</artifactId>
     <version>0.1.0</version>
 </dependency>
 ```
@@ -31,7 +31,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
 #### Usage and tests
 ---
 
-1. Construct the Registration object
+1. Construct the Registration (`com.samsungpay.s2p.membership.Registration`) object
 
     ```java
     // Barcode
@@ -114,20 +114,23 @@ compile group: 'com.samsungpay.s2p', label: 's2p-reg', version: '0.1.0'
     // merchant's privateKey, keyId (will be provided upon successfull registration)
     RSAPrivateKey privateKey =
     final String keyId =
-    final S2PRequest.Request request = S2PRequest.Request.POST_SAVE_TO_SPAY;
+    final S2PRequest.Request request = S2PRequest.Request.SAVE_TO_SPAY_MEMBERSHIP;
+
+    // Construct a registration object
+    Registration registration =
 
     // Create the model that will be placed in view
     // Either provide (RSAPrivateKey) privateKey or file path of the private key PEM to sign the request
 
     // Sign with private key
-    S2PRequest s2PRequest = S2PRequest.newBuilder()
+    S2PRequest request = S2PRequest.newBuilder()
             .setKeyID(keyID)
             .setRegistration(registration)
             .setRequest(request)
             .sign(privateKey);
 
     // Sign with private key PEM file
-    S2PRequest s2PRequestSignWithPEM = S2PRequest.newBuilder()
+    S2PRequest request = S2PRequest.newBuilder()
             .setKeyID(keyID)
             .setRegistration(registration)
             .setRequest(request)
