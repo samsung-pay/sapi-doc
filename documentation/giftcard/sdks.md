@@ -14,12 +14,23 @@ S2P SDK will grant Samsung Pay registered merchants capabilities of easily integ
 
 ##### Gradle
 ```gradle
+repositories {
+    jcenter()
+}
+
 compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
 ```
 
 <br>
 ##### Maven
 ```xml
+<repositories>
+    <repository>
+        <id>jcenter</id>
+        <url>https://jcenter.bintray.com</url>
+    </repository>
+</repositories>
+
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
     <artifactId>s2p-all-java</artifactId>
