@@ -69,17 +69,35 @@ securityDefinitions:
 definitions:
   Registration:
     type: object
-    required: [cardId, productId, tncLink]
+    required: [cardId, cardArt, brand, brandLogo, tnc]
     properties:
       cardId:
         type: string
         description: The unique identifier of the gift card. (If the merchant did not implement cardId, then use card number.)
-      productId:
+      cardArt:
         type: string
-        description: The product id of gift card. This is an identifier of product that the gift card belongs to.
-      tncLink:
+        description: The url link of product art image.
+      brand:
         type: string
+        description: The gift card's brand name.
+      brandLogo:
+        type: string
+        description: The url link of brang logo image.
+      tnc:
+        type: object
+        $ref: "#/definitions/TnC"
         description: The link of product's terms and conditions page.
+
+  TnC:
+    type: object
+    description: At lease one field (either link or content) is required
+    properties:
+      link:
+        type: string
+        description: The link of Terms and Conditions web page.
+      content:
+        type: string
+        description: The Terms and Conditions content.
 
   JWT:
     type: object
