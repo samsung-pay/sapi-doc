@@ -50,15 +50,15 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
                 .build();
 
     Card card = Card.newBuilder()
-            .id("Dummy card ID")
-            .imageUrl("Dummy card image art url link")
-            .tnc(tnC)
-            .build();
+                  .id("Dummy card ID")
+                  .imageUrl("Dummy card image art url link")
+                  .tnc(tnC)
+                  .build();
 
     Merchant merchant = Merchant.newBuilder()
-            .name("Dummy merchant name")
-            .logoUrl("Dummy merchant logo image url link")
-            .build();
+                          .name("Dummy merchant name")
+                          .logoUrl("Dummy merchant logo image url link")
+                          .build();
 
     Registration.newBuilder()
             .card(card)
