@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
+compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
 ```
 
 <br>
@@ -34,7 +34,7 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
     <artifactId>s2p-all-java</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
@@ -45,11 +45,25 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
 1. Construct the Registration (`com.samsungpay.s2p.giftcard.Registration`) object
 
     ```java
+    TnC tnC = TnC.newBuilder()
+                .url("Dummy TnC url link")
+                .build();
+
+    Card card = Card.newBuilder()
+            .id("Dummy card ID")
+            .imageUrl("Dummy card image art url link")
+            .tnc(tnC)
+            .build();
+
+    Merchant merchant = Merchant.newBuilder()
+            .name("Dummy merchant name")
+            .logoUrl("Dummy merchant logo image url link")
+            .build();
+
     Registration.newBuilder()
-        .cardId("11223344556677")
-        .productId("V96T31AVCR641ZM2M5BS3SAD7S")
-        .tncLink("http://us.playstation.com/")
-        .build();
+            .card(card)
+            .merchant(merchant)
+            .build();
     ```
 <br>
 2. Construct the S2PRequest and sign

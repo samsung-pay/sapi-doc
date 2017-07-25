@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.0'
+compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
 ```
 
 <br>
