@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
+compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '0.2.0'
 ```
 
 <br>
@@ -33,8 +33,8 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
 
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
-    <artifactId>s2p-all-java</artifactId>
-    <version>0.1.3</version>
+    <artifactId>s2p-all</artifactId>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -45,14 +45,14 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
 1. Construct the Registration (`com.samsungpay.s2p.giftcard.Registration`) object
 
     ```java
-    TnC tnC = TnC.newBuilder()
-                .url("Dummy TnC url link")
+    Tnc tnc = Tnc.newBuilder()
+                .url("Dummy Tnc url link")
                 .build();
 
     Card card = Card.newBuilder()
                   .id("Dummy card ID")
                   .imageUrl("Dummy card image art url link")
-                  .tnc(tnC)
+                  .tnc(tnc)
                   .build();
 
     Merchant merchant = Merchant.newBuilder()

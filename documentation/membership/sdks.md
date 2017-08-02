@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
+compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '0.2.0'
 ```
 
 <br>
@@ -33,8 +33,8 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all-java', version: '0.1.3'
 
 <dependency>
     <groupId>com.samsungpay.s2p</groupId>
-    <artifactId>s2p-all-java</artifactId>
-    <version>0.1.0</version>
+    <artifactId>s2p-all</artifactId>
+    <version>0.2.0</version>
 </dependency>
 ```
 
