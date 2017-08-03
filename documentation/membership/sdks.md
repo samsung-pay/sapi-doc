@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '0.2.0'
+compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '1.0.0'
 ```
 
 <br>
@@ -32,9 +32,10 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '0.2.0'
 </repositories>
 
 <dependency>
-    <groupId>com.samsungpay.s2p</groupId>
-    <artifactId>s2p-all</artifactId>
-    <version>0.2.0</version>
+  <groupId>com.samsungpay.s2p</groupId>
+  <artifactId>s2p-all</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
 </dependency>
 ```
 
@@ -140,12 +141,13 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '0.2.0'
             .setRequest(request)
             .sign(privateKey);
 
-    // Sign with private key PEM file
+    // Sign with private key PEM file (set private key retrieve passphrase optionally)
     S2PRequest request = S2PRequest.newBuilder()
             .setKeyID(keyID)
             .setRegistration(registration)
             .setRequest(request)
             .setKeyPEMPath("key_pem_file_path")
+            .setPassphrase("private_key_retrieve_passphrase")
             .sign();
 
     String s2PReq = s2PRequest.encode();
