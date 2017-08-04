@@ -35,7 +35,6 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '1.0.0'
   <groupId>com.samsungpay.s2p</groupId>
   <artifactId>s2p-all</artifactId>
   <version>1.0.0</version>
-  <type>pom</type>
 </dependency>
 ```
 
