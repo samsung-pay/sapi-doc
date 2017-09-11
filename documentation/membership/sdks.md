@@ -156,5 +156,5 @@ compile group: 'com.samsungpay.s2p', label: 's2p-all', version: '1.0.0'
 <br>
     ```html
     <div id="S2P-root" s2p-req="{S2PReq}"></div>
-    <script src="https://unpkg.com/s2p@1.0.0/s2p.js"></script>
+    <script src="https://libs.samsungpay.com/s2pjs/1.0.0/s2p.min.js"></script>
     ```
