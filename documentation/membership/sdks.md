@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.samsungpay.s2p:s2p-all:1.0.0'
+compile 'com.samsungpay.s2p:s2p-all:1.0.1'
 ```
 
 <br>
@@ -34,7 +34,7 @@ compile 'com.samsungpay.s2p:s2p-all:1.0.0'
 <dependency>
   <groupId>com.samsungpay.s2p</groupId>
   <artifactId>s2p-all</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
@@ -134,14 +134,14 @@ compile 'com.samsungpay.s2p:s2p-all:1.0.0'
     // Either provide (RSAPrivateKey) privateKey or file path of the private key PEM to sign the request
 
     // Sign with private key
-    S2PRequest request = S2PRequest.newBuilder()
+    S2PRequest s2pRequest = S2PRequest.newBuilder()
             .setKeyID(keyID)
             .setRegistration(registration)
             .setRequest(request)
             .sign(privateKey);
 
     // Sign with private key PEM file (set private key retrieve passphrase optionally)
-    S2PRequest request = S2PRequest.newBuilder()
+    S2PRequest s2pRequest = S2PRequest.newBuilder()
             .setKeyID(keyID)
             .setRegistration(registration)
             .setRequest(request)
