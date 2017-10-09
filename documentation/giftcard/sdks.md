@@ -18,7 +18,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.samsungpay.s2p:s2p-all:1.0.1'
+compile 'com.samsungpay.s2p:s2p-all:1.0.2'
 ```
 
 <br>
@@ -34,7 +34,7 @@ compile 'com.samsungpay.s2p:s2p-all:1.0.1'
 <dependency>
   <groupId>com.samsungpay.s2p</groupId>
   <artifactId>s2p-all</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 </dependency>
 ```
 
