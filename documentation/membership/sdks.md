@@ -156,5 +156,5 @@ compile 'com.samsungpay.s2p:s2p-all:1.0.2'
 <br>
     ```html
     <div id="S2P-root" s2p-req="{S2PReq}"></div>
-    <script src="https://libs.samsungpay.com/s2pjs/1.0.0/s2p.min.js"></script>
+    <script src="https://libs.samsungpay.com/s2pjs/1.1.0/s2p.min.js"></script>
     ```
