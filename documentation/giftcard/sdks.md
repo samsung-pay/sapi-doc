@@ -105,9 +105,9 @@ compile 'com.samsungpay.s2p:s2p-all:1.0.2'
     <div id="S2P-root" s2p-req="{S2PReq}"></div>
     <script src="https://libs.samsungpay.com/s2pjs/1.1.0/s2p.min.js"></script>
     ```
-4. For staging tests purposes, please add base-url attribute to the S2P-root dom element
+4. For development or test purposes, please add base-url attribute to the S2P-root dom element
 <br>
     ```html
-    <div id="S2P-root" s2p-req="{S2PReq}" base-url="staging_base_url"></div>
+    <div id="S2P-root" s2p-req="{S2PReq}" base-url="https://api.samsungpaydev.us"></div>
     <script src="https://libs.samsungpay.com/s2pjs/1.1.0/s2p.min.js"></script>
     ```
